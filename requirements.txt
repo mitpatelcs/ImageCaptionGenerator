@@ -1,0 +1,28 @@
+
+# Core deep learning
+tensorflow==2.18.0
+keras==3.8.0
+h5py==3.12.1
+
+# Numerical / data handling
+numpy==2.0.2
+pandas==2.2.3
+
+# Image loading / processing
+pillow==11.1.0
+
+# Exploratory data analysis & plotting
+matplotlib==3.10.0
+seaborn==0.13.2
+
+# Machine-learning utilities (train/test split, BLEU score)
+scikit-learn==1.6.1
+nltk==3.9.1
+
+# Progress bars (feature extraction)
+tqdm==4.67.1
+
+# Notebook tooling (already present in the imagecaption env)
+notebook>=7.0
+nbconvert==7.17.1
+ipykernel==7.2.0
