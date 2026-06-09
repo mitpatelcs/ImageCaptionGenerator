@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Caption Generator</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="workspace">
+      <div class="image-panel">
+        <div class="preview" id="preview">
+          <span>No image selected</span>
+        </div>
+      </div>
+
+      <aside class="control-panel">
+        <h1>Image Caption Generator</h1>
+
+        <label class="upload-box">
+          <input id="imageInput" type="file" accept="image/png,image/jpeg">
+          <span>Select Image</span>
+        </label>
+
+        <button id="uploadBtn" type="button">Upload Image</button>
+        <button id="captionBtn" type="button" disabled>Generate Caption</button>
+
+        <div class="status" id="status">Waiting for an image.</div>
+
+        <section class="result">
+          <h2>Caption</h2>
+          <p id="captionText">-</p>
+          <audio id="audioPlayer" controls hidden></audio>
+        </section>
+      </aside>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
+
