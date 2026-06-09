@@ -1,12 +1,3 @@
-# ---------------------------------------------------------------------------
-# Image Caption Generator - API + frontend container
-#
-# This image runs the FastAPI app (api/main.py). The same app also serves the
-# static frontend (frontend/index.html) at "/", so everything is one container
-# on one port (8000): open http://localhost:8000 and you get the web UI, and
-# the UI calls the API on the same origin.
-# ---------------------------------------------------------------------------
-
 # Small official Python image. Matches the project's Python 3.10 / TF 2.18.0.
 FROM python:3.10-slim
 
