@@ -1,0 +1,24 @@
+from pathlib import Path
+
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+
+ARTIFACTS_DIR = PROJECT_ROOT / "artifacts"
+DATASET_DIR = ARTIFACTS_DIR / "Flickr8k"
+IMAGES_DIR = DATASET_DIR / "Images"
+CAPTIONS_FILE = DATASET_DIR / "captions.txt"
+
+TOKENIZER_PATH = ARTIFACTS_DIR / "tokenizer.pkl"
+MAPPING_PATH = ARTIFACTS_DIR / "mapping.pkl"
+ALL_CAPTIONS_PATH = ARTIFACTS_DIR / "all_captions.pkl"
+FEATURES_PATH = ARTIFACTS_DIR / "features.pkl"
+MODEL_PATH = ARTIFACTS_DIR / "model.h5"
+HISTORY_PATH = ARTIFACTS_DIR / "history.pkl"
+
+IMAGE_SIZE = (224, 224)
+FEATURE_SHAPE = (1, 4096)
+RANDOM_STATE = 42
+TEST_SIZE = 0.1
+BATCH_SIZE = 32
+DEFAULT_EPOCHS = 5
+

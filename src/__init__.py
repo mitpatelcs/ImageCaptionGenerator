@@ -1,0 +1,1 @@
+"""Reusable code for the Image Caption Generator project."""
