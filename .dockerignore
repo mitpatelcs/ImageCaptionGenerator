@@ -1,9 +1,3 @@
-# ---------------------------------------------------------------------------
-# Files NOT sent to the Docker build context.
-# This keeps the build fast and the image small. Anything listed here is
-# invisible to the `COPY . .` step in the Dockerfile.
-# ---------------------------------------------------------------------------
-
 # Git, Claude, editor, and OS junk
 .git
 .gitignore
