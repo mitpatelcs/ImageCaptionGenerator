@@ -1,0 +1,39 @@
+# ---------------------------------------------------------------------------
+# Files NOT sent to the Docker build context.
+# This keeps the build fast and the image small. Anything listed here is
+# invisible to the `COPY . .` step in the Dockerfile.
+# ---------------------------------------------------------------------------
+
+# Git, Claude, editor, and OS junk
+.git
+.gitignore
+.claude
+**/.DS_Store
+
+# Python caches and virtual environments
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+.venv
+venv
+env
+ENV
+
+# Notebooks and tests are not needed to SERVE the API
+notebooks/
+tests/
+
+# Training-only / large artifacts NOT needed for inference.
+# The API only needs: model.h5, tokenizer.pkl, mapping.pkl, all_captions.pkl
+# (those are intentionally NOT ignored, so they get copied into the image).
+artifacts/Flickr8k/
+artifacts/features.pkl
+artifacts/history.pkl
+artifacts/predicted_caption.mp3
+artifacts/uploads/
+artifacts/audio/
+
+# Docker files and docs (not needed inside the image)
+Dockerfile
+.dockerignore
+README.md
