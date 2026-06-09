@@ -170,6 +170,7 @@ artifacts/Flickr8k/
 artifacts/*.pkl
 artifacts/*.h5
 artifacts/*.keras
+artifacts/*.mp3
 
 # Model files anywhere
 

@@ -22,6 +22,9 @@ nltk==3.9.1
 # Progress bars (feature extraction)
 tqdm==4.67.1
 
+# Text-to-speech
+gTTS==2.5.4
+
 # Notebook tooling (already present in the imagecaption env)
 notebook>=7.0
 nbconvert==7.17.1
