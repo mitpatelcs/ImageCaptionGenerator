@@ -171,6 +171,8 @@ artifacts/*.pkl
 artifacts/*.h5
 artifacts/*.keras
 artifacts/*.mp3
+artifacts/uploads/
+artifacts/audio/
 
 # Model files anywhere
 

@@ -25,6 +25,11 @@ tqdm==4.67.1
 # Text-to-speech
 gTTS==2.5.4
 
+# API
+fastapi==0.115.6
+uvicorn==0.34.0
+python-multipart==0.0.20
+
 # Notebook tooling (already present in the imagecaption env)
 notebook>=7.0
 nbconvert==7.17.1

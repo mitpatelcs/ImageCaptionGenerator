@@ -27,7 +27,7 @@ def extract_image_feature(image_path, model, image_size=IMAGE_SIZE):
     image = image.reshape((1, image_size[0], image_size[1], 3))
     image = preprocess_input(image)
 
-    feature = model.predict(image, verbose=0)
+    feature = model([image], training=False).numpy()
     return feature.astype("float32")
 
 
@@ -78,4 +78,3 @@ def run_feature_extraction(images_dir=IMAGES_DIR, features_path=FEATURES_PATH):
     features = extract_features(images_dir, model)
     save_features(features, features_path)
     return features
-
