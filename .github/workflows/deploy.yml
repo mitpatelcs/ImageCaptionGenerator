@@ -1,10 +1,3 @@
-# CI workflow: build the project and validate that the Docker image builds.
-#
-# IMPORTANT: this workflow does NOT deploy to AWS. It only proves the code
-# installs, tests pass (when tests exist), and the Docker image builds. The
-# steps to deploy to ECS later are documented (commented) at the bottom and in
-# deployment/github-actions-guide.md.
-
 name: CI - Build and Validate
 
 on:
@@ -58,34 +51,3 @@ jobs:
           docker images image-caption-generator:ci
           echo "✅ Docker image built successfully."
 
-      # ----------------------------------------------------------------------
-      # FUTURE - deploy to AWS ECS (kept disabled on purpose).
-      # To enable: add the GitHub Secrets listed in
-      # deployment/github-actions-guide.md, then uncomment and adapt:
-      #
-      # - name: Configure AWS credentials
-      #   uses: aws-actions/configure-aws-credentials@v4
-      #   with:
-      #     aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      #     aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      #     aws-region: ${{ secrets.AWS_REGION }}
-      #
-      # - name: Login to Amazon ECR
-      #   id: ecr
-      #   uses: aws-actions/amazon-ecr-login@v2
-      #
-      # - name: Build, tag, and push image to ECR
-      #   env:
-      #     REGISTRY: ${{ steps.ecr.outputs.registry }}
-      #     REPO: ${{ secrets.ECR_REPOSITORY }}
-      #   run: |
-      #     docker build -t $REGISTRY/$REPO:latest .
-      #     docker push $REGISTRY/$REPO:latest
-      #
-      # - name: Deploy to ECS (rolling update)
-      #   run: |
-      #     aws ecs update-service \
-      #       --cluster image-caption-cluster \
-      #       --service image-caption-service \
-      #       --force-new-deployment
-      # ----------------------------------------------------------------------
